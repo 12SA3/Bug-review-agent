@@ -1,0 +1,16 @@
+# Python virtual environments
+.venv/
+**/.venv/
+
+# Python build and cache files
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Demo and runtime data
+backend/.demo_data/
+backend/.review_logs/
+backend/runtime/
+
+# Frontend dependencies
+node_modules/
