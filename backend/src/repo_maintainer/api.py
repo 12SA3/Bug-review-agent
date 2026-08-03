@@ -799,6 +799,7 @@ def create_app(config: PlatformConfig | None = None) -> FastAPI:
             return {"status": "ignored", "reason": "not_a_bug_fix_pr"}
         return {"status": "accepted", "bug_report": bug_report}
 
+    @app.post("/api/webhooks/manual")
     @app.post("/webhooks/manual")
     def manual_webhook(payload: WebhookManualRequest) -> dict[str, Any]:
         bug_report = pr_listener.parse_manual_input(
